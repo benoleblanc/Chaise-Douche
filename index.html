@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chaise de douche coulissante</title>
+<meta name="description" content="Comparatif de chaises de douche (chaises de transfert) coulissantes avec siège pivotant : marques, prix, notes et verdicts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f8f8;
+    --surface: #ffffff;
+    --text: #1d2a2e;
+    --muted: #5d6f74;
+    --line: #dfe7e8;
+    --accent: #0f7c86;
+    --accent-soft: #e2f3f4;
+    --good: #1f8a4c;
+    --good-soft: #e3f4ea;
+    --mid: #a56a00;
+    --mid-soft: #fbf0d9;
+    --bad: #b8322a;
+    --bad-soft: #fbe5e3;
+    --shadow: 0 1px 2px rgba(20, 40, 45, .06), 0 6px 20px rgba(20, 40, 45, .06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #11181a; --surface: #1a2427; --text: #e6eef0; --muted: #9aaeb3; --line: #2a383c;
+      --accent: #4fc3cc; --accent-soft: #173539;
+      --good: #5ccf8b; --good-soft: #17342a; --mid: #e9b34a; --mid-soft: #3a2f17; --bad: #f08079; --bad-soft: #3d1f1d;
+      --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #11181a; --surface: #1a2427; --text: #e6eef0; --muted: #9aaeb3; --line: #2a383c;
+    --accent: #4fc3cc; --accent-soft: #173539;
+    --good: #5ccf8b; --good-soft: #17342a; --mid: #e9b34a; --mid-soft: #3a2f17; --bad: #f08079; --bad-soft: #3d1f1d;
+    --shadow: none;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.55 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+  header.hero { padding: 56px 0 32px; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: 12px; font-weight: 600; color: var(--accent); margin: 0 0 10px; }
+  h1, h2 { font-family: Fraunces, Georgia, serif; line-height: 1.15; margin: 0; }
+  h1 { font-size: clamp(28px, 5vw, 46px); max-width: 20ch; }
+  .lede { color: var(--muted); max-width: 62ch; margin: 14px 0 0; font-size: 17px; }
+
+  section { padding: 24px 0; }
+  h2 { font-size: 26px; margin-bottom: 16px; }
+  .section-sub { color: var(--muted); margin: -8px 0 20px; }
+
+  .where { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .note { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; box-shadow: var(--shadow); }
+  .note strong { display: block; margin-bottom: 4px; }
+  .note p { margin: 0; color: var(--muted); }
+
+  .tiers { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .tier { border-radius: 14px; padding: 18px; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); border-top: 4px solid var(--c); }
+  .tier h3 { margin: 0 0 4px; font-size: 16px; }
+  .tier .brands { font-weight: 600; color: var(--c); margin: 0 0 8px; }
+  .tier p { margin: 0; color: var(--muted); font-size: 15px; }
+  .tier .price { display: inline-block; margin-top: 10px; font-weight: 600; font-size: 14px; background: var(--soft); color: var(--c); padding: 2px 10px; border-radius: 999px; }
+  .t-best { --c: var(--accent); --soft: var(--accent-soft); }
+  .t-good { --c: var(--good); --soft: var(--good-soft); }
+  .t-mid  { --c: var(--mid);  --soft: var(--mid-soft); }
+  .t-bad  { --c: var(--bad);  --soft: var(--bad-soft); }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .filters button {
+    font: inherit; font-size: 14px; font-weight: 500; cursor: pointer;
+    border: 1px solid var(--line); background: var(--surface); color: var(--text);
+    padding: 7px 14px; border-radius: 999px;
+  }
+  .filters button[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+    display: flex; flex-direction: column; box-shadow: var(--shadow);
+  }
+  .card .img { background: #fff; aspect-ratio: 4 / 3; display: grid; place-items: center; padding: 12px; border-bottom: 1px solid var(--line); }
+  .card .img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .card .body { padding: 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .card .top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .brand { font-weight: 600; font-size: 17px; }
+  .price { font-family: Fraunces, Georgia, serif; font-size: 22px; font-weight: 700; white-space: nowrap; }
+  .meta { display: grid; gap: 4px; font-size: 14px; color: var(--muted); margin: 0; }
+  .meta div { display: flex; gap: 6px; }
+  .meta dt { min-width: 74px; }
+  .meta dd { margin: 0; color: var(--text); }
+  .stars { color: #e3a008; letter-spacing: 1px; }
+  .tag { font-size: 13px; color: var(--muted); }
+  .verdict { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  .badge { font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--soft); color: var(--c); }
+  .v-good { --c: var(--good); --soft: var(--good-soft); }
+  .v-mid  { --c: var(--mid);  --soft: var(--mid-soft); }
+  .v-bad  { --c: var(--bad);  --soft: var(--bad-soft); }
+  .v-unk  { --c: var(--accent); --soft: var(--accent-soft); }
+  .card.v-bad .img img { opacity: .7; }
+  .link { font-size: 14px; font-weight: 600; text-decoration: none; }
+  .link:hover { text-decoration: underline; }
+  .store { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; }
+  .hidden { display: none; }
+
+  footer { color: var(--muted); font-size: 14px; padding: 32px 0 48px; border-top: 1px solid var(--line); margin-top: 24px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Comparatif · Aide à la mobilité</p>
+    <h1>Chaise de douche coulissante avec siège pivotant</h1>
+    <p class="lede">Aussi appelée chaise de transfert : elle permet d’entrer dans la baignoire en glissant, sans enjamber le rebord. Voici les modèles trouvés, leurs prix et ce qu’on en pense.</p>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>Où en trouver à Laval</h2>
+      <div class="where">
+        <div class="note">
+          <strong>Médicus Laval</strong>
+          <p>Des chaises de douche, mais pas de modèles coulissants (selon leur site web).</p>
+        </div>
+        <div class="note">
+          <strong>Solu-Med Laval</strong>
+          <p>La seule boutique à Laval qui en offre. 1607, Autoroute 440 Ouest.</p>
+        </div>
+        <div class="note">
+          <strong>Amazon</strong>
+          <p>Pour le reste, c’est sur Amazon, avec un choix beaucoup plus large.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Les meilleures marques</h2>
+      <p class="section-sub">Selon mes recherches.</p>
+      <div class="tiers">
+        <div class="tier t-best">
+          <h3>Sécurité et confort à long terme</h3>
+          <p class="brands">Platinum Health · Eagle Health Supplies</p>
+          <p>Le meilleur choix pour la sécurité optimale, mais le prix est plus élevé.</p>
+          <span class="price">400 $ à 500 $</span>
+        </div>
+        <div class="tier t-good">
+          <h3>Économique et très sécuritaire</h3>
+          <p class="brands">VEVOR · DMI</p>
+          <p>Une option fonctionnelle et plus abordable qui fera le travail.</p>
+          <span class="price">200 $ à 250 $</span>
+        </div>
+        <div class="tier t-mid">
+          <h3>Intermédiaires mais correctes</h3>
+          <p class="brands">Loyoda · Pelegon</p>
+          <p>La qualité des plastiques et des joints peut être un peu inégale avec le temps.</p>
+        </div>
+        <div class="tier t-bad">
+          <h3>À éviter</h3>
+          <p class="brands">CHOYTONG · WHLICKS</p>
+          <p>Risque d’instabilité mécanique trop élevé pour un siège pivotant en milieu humide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Les modèles comparés</h2>
+      <div class="filters" role="group" aria-label="Filtrer par verdict">
+        <button type="button" data-filter="all" aria-pressed="true">Tous</button>
+        <button type="button" data-filter="v-good" aria-pressed="false">Bons choix</button>
+        <button type="button" data-filter="v-mid" aria-pressed="false">Corrects</button>
+        <button type="button" data-filter="v-bad" aria-pressed="false">À éviter</button>
+      </div>
+
+      <div class="grid" id="grid">
+
+        <article class="card v-unk">
+          <div class="img"><img src="images/image1.png" alt="Chaise de transfert Eagle Health Supplies" loading="lazy"></div>
+          <div class="body">
+            <span class="store">Solu-Med Laval</span>
+            <div class="top"><span class="brand">Eagle Health Supplies</span><span class="price">—</span></div>
+            <dl class="meta">
+              <div><dt>Note</dt><dd>—</dd></div>
+              <div><dt>Livraison</dt><dd>À confirmer en boutique</dd></div>
+            </dl>
+            <span class="tag">Meilleure marque</span>
+            <div class="verdict"><span class="badge">Prix à vérifier</span><a class="link" href="https://www.solumed.ca/chaise-de-transfert-coulissant-et-pivotant-77662" target="_blank" rel="noopener">Voir le produit →</a></div>
+          </div>
+        </article>
+
+        <article class="card v-good">
+          <div class="img"><img src="images/image4.jpeg" alt="Chaise de transfert Platinum Health" loading="lazy"></div>
+          <div class="body">
+            <span class="store">Amazon</span>
+            <div class="top"><span class="brand">Platinum Health</span><span class="price">419 $</span></div>
+            <dl class="meta">
+              <div><dt>Note</dt><dd><span class="stars">★★★★★</span> 4,6 / 5 · 4 427 votes</dd></div>
+              <div><dt>Livraison</dt><dd>5 à 10 jours</dd></div>
+            </dl>
+            <span class="tag">Meilleure marque</span>
+            <div class="verdict"><span class="badge">Bien mais cher</span><a class="link" href="https://www.amazon.ca/-/fr/dp/B0184P0UZ2/" target="_blank" rel="noopener">Voir le produit →</a></div>
+          </div>
+        </article>
+
+        <article class="card v-good">
+          <div class="img"><img src="images/image5.jpeg" alt="Chaise de transfert VEVOR" loading="lazy"></div>
+          <div class="body">
+            <span class="store">Amazon</span>
+            <div class="top"><span class="brand">VEVOR</span><span class="price">217 $</span></div>
+            <dl class="meta">
+              <div><dt>Note</dt><dd><span class="stars">★★★★☆</span> 4,3 / 5 · 248 votes</dd></div>
+              <div><dt>Livraison</dt><dd>5 à 10 jours</dd></div>
+            </dl>
+            <span class="tag">Très bonne marque</span>
+            <div class="verdict"><span class="badge">Bon choix</span><a class="link" href="https://www.amazon.ca/-/fr/dp/B0D97C1Q8L/" target="_blank" rel="noopener">Voir le produit →</a></div>
+          </div>
+        </article>
+
+        <article class="card v-good">
+          <div class="img"><img src="images/image6.jpeg" alt="Chaise de transfert VEVOR, autre modèle" loading="lazy"></div>
+          <div class="body">
+            <span class="store">Amazon</span>
+            <div class="top"><span class="brand">VEVOR</span><span class="price">217 $</span></div>
+            <dl class="meta">
+              <div><dt>Note</dt><dd><span class="stars">★★★★☆</span> 4,4 / 5 · 408 votes</dd></div>
+              <div><dt>Livraison</dt><dd>7 à 15 jours</dd></div>
+            </dl>
+            <span class="tag">Très bonne marque</span>
+            <div class="verdict"><span class="badge">Bon choix</span><a class="link" href="https://www.amazon.ca/-/fr/dp/B0D9GY15H5/" target="_blank" rel="noopener">Voir le produit →</a></div>
+          </div>
+        </article>
+
+        <article class="card v-mid">
+          <div class="img"><img src="images/image10.jpeg" alt="Chaise de transfert Loyoda" loading="lazy"></div>
+          <div class="body">
+            <span class="store">Amazon</span>
+            <div class="top"><span class="brand">Loyoda</span><span class="price">212 $</span></div>
+            <dl class="meta">
+              <div><dt>Note</dt><dd><span class="stars">★★★★★</span> 4,5 / 5 · 73 votes</dd></div>
+              <div><dt>Livraison</dt><dd>2 jours</dd></div>
+            </dl>
+            <span class="tag">Marque intermédiaire mais correcte</span>
+            <div class="verdict"><span class="badge">Pas pire</span><a class="link" href="https://www.amazon.ca/-/fr/dp/B0G7D4D3DV/" target="_blank" rel="noopener">Voir le produit →</a></div>
+          </div>
+        </article>
+
+        <article class="card v-mid">
+          <div class="img"><img src="images/image11.jpeg" alt="Chaise de transfert Loyoda, autre modèle" loading="lazy"></div>
+          <div class="body">
+            <span class="store">Amazon</span>
+            <div class="top"><span class="brand">Loyoda</span><span class="price">270 $</span></div>
+            <dl class="meta">
+              <div><dt>Note</dt><dd><span class="stars">★★★★★</span> 4,5 / 5 · 103 votes</dd></div>
+              <div><dt>Livraison</dt><dd>5 jours</dd></div>
+            </dl>
+            <span class="tag">Marque intermédiaire mais correcte</span>
+            <div class="verdict"><span class="badge">Pas pire</span><a class="link" href="https://www.amazon.ca/-/fr/dp/B0F9Y8ZNHH/" target="_blank" rel="noopener">Voir le produit →</a></div>
+          </div>
+        </article>
+
+        <article class="card v-mid">
+          <div class="img"><img src="images/image3.jpeg" alt="Chaise de transfert Pelegon" loading="lazy"></div>
+          <div class="body">
+            <span class="store">Amazon</span>
+            <div class="top"><span class="brand">PELEGON</span><span class="price">463 $</span></div>
+            <dl class="meta">
+              <div><dt>Note</dt><dd><span class="stars">★★★★★</span> 4,5 / 5 · 8 votes</dd></div>
+              <div><dt>Livraison</dt><dd>10 à 15 jours</dd></div>
+            </dl>
+            <span class="tag">Marque intermédiaire mais correcte</span>
+            <div class="verdict"><span class="badge">Trop cher pour une marque intermédiaire</span><a class="link" href="https://www.amazon.ca/-/fr/dp/B0GQQ695HK/" target="_blank" rel="noopener">Voir le produit →</a></div>
+          </div>
+        </article>
+
+        <article class="card v-bad">
+          <div class="img"><img src="images/image7.jpeg" alt="Chaise de transfert DMI" loading="lazy"></div>
+          <div class="body">
+            <span class="store">Amazon</span>
+            <div class="top"><span class="brand">DMI</span><span class="price">179 $</span></div>
+            <dl class="meta">
+              <div><dt>Note</dt><dd><span class="stars">★★★★☆</span> 4 / 5 · 8 055 votes</dd></div>
+              <div><dt>Livraison</dt><dd>2 jours</dd></div>
+            </dl>
+            <span class="tag">Très bonne marque, mais ne pivote pas</span>
+            <div class="verdict"><span class="badge">Non : ne pivote pas</span><a class="link" href="https://www.amazon.ca/-/fr/dp/B000NGUD94/" target="_blank" rel="noopener">Voir le produit →</a></div>
+          </div>
+        </article>
+
+        <article class="card v-bad">
+          <div class="img"><img src="images/image2.jpeg" alt="Chaise de transfert CHOYTONG" loading="lazy"></div>
+          <div class="body">
+            <span class="store">Amazon</span>
+            <div class="top"><span class="brand">CHOYTONG</span><span class="price">229 $</span></div>
+            <dl class="meta">
+              <div><dt>Note</dt><dd><span class="stars">★★★★★</span> 5 / 5 · 1 vote</dd></div>
+              <div><dt>Livraison</dt><dd>2 jours</dd></div>
+            </dl>
+            <span class="tag">Marque à éviter</span>
+            <div class="verdict"><span class="badge">Non : à éviter</span><a class="link" href="https://www.amazon.ca/-/fr/dp/B0FFBBL7QL/" target="_blank" rel="noopener">Voir le produit →</a></div>
+          </div>
+        </article>
+
+        <article class="card v-bad">
+          <div class="img"><img src="images/image8.jpeg" alt="Chaise de transfert WHLICKS" loading="lazy"></div>
+          <div class="body">
+            <span class="store">Amazon</span>
+            <div class="top"><span class="brand">WHLICKS</span><span class="price">306 $</span></div>
+            <dl class="meta">
+              <div><dt>Note</dt><dd><span class="stars">★★★★★</span> 4,5 / 5 · 26 votes</dd></div>
+              <div><dt>Livraison</dt><dd>Environ 5 jours</dd></div>
+            </dl>
+            <span class="tag">Marque à éviter</span>
+            <div class="verdict"><span class="badge">Non : à éviter</span><a class="link" href="https://www.amazon.ca/-/fr/dp/B0G6ZSQPC2/" target="_blank" rel="noopener">Voir le produit →</a></div>
+          </div>
+        </article>
+
+        <article class="card v-bad">
+          <div class="img"><img src="images/image9.jpeg" alt="Chaise de transfert Careboda" loading="lazy"></div>
+          <div class="body">
+            <span class="store">Amazon</span>
+            <div class="top"><span class="brand">Careboda</span><span class="price">149 $</span></div>
+            <dl class="meta">
+              <div><dt>Note</dt><dd><span class="stars">★★★★☆</span> 4,2 / 5 · 31 votes</dd></div>
+              <div><dt>Livraison</dt><dd>—</dd></div>
+            </dl>
+            <span class="tag">Marque à éviter, ne pivote pas</span>
+            <div class="verdict"><span class="badge">Non : à éviter</span><a class="link" href="https://www.amazon.ca/-/fr/dp/B0FG33YDK5/" target="_blank" rel="noopener">Voir le produit →</a></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Prix et notes relevés au moment de la recherche ; ils peuvent avoir changé depuis.</div>
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll('.filters button');
+  const cards = document.querySelectorAll('#grid .card');
+  buttons.forEach(btn => btn.addEventListener('click', () => {
+    const f = btn.dataset.filter;
+    buttons.forEach(b => b.setAttribute('aria-pressed', b === btn));
+    cards.forEach(c => c.classList.toggle('hidden', f !== 'all' && !c.classList.contains(f)));
+  }));
+</script>
+</body>
+</html>
